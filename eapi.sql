@@ -30,6 +30,7 @@ CREATE TABLE `products` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `detail` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` int(11) NOT NULL,
   `stock` int(11) NOT NULL,
   `discount` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -67,4 +68,4 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
--- 2017-12-28 10:00:37
+-- 2017-12-28 10:24:28

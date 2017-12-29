@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Resources\Product\ProductResource;
+use App\Http\Resources\Product\ProductCollection;
 use App\Model\Product;
 use App\Model\Review;
 use Illuminate\Http\Request;
@@ -15,7 +16,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-      return Product::find(50)->reviews;
+      //return new ProductCollection(Product::all());
+
+        return ProductCollection::collection(Product::all());
 
        // return DB::table('products')->select('name','detail')->where('id',1)->get();
         //return Review::find(50)->products;

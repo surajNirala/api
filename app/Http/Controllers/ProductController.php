@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\Http\Resources\Product\ProductResource;
 use App\Http\Resources\Product\ProductCollection;
 use App\Model\Product;
-use App\Model\Review;
 use Illuminate\Http\Request;
 //use DB;
 class ProductController extends Controller
@@ -18,7 +17,10 @@ class ProductController extends Controller
     {
       //return new ProductCollection(Product::all());
 
-        return ProductCollection::collection(Product::all());
+       // return ProductCollection::collection(Product::all());
+
+
+        return ProductCollection::collection(Product::paginate(5));
 
        // return DB::table('products')->select('name','detail')->where('id',1)->get();
         //return Review::find(50)->products;

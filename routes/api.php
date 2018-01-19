@@ -22,3 +22,5 @@ Route::group(['prefix'=>'products'],function(){
 
 	Route::apiResource('/{product}/reviews','ReviewController');
 });
+
+Route::get('pdf','PdfController@pdf');
